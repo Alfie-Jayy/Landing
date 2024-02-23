@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanilla</title>
     <script src="https://kit.fontawesome.com/183280f8d9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="shortcut icon" href="../assets/Img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="../src/output.css">
 </head>
@@ -13,7 +14,8 @@
 <body>
 
     <!-- nav bar -->
-    <div class="bg-green-400">
+    <div class="bg-green-400 nav-control animate__animated">
+        
         <div class="flex justify-between items-center container mx-auto px-10 md:px-20 lg:px-32">
 
             <!-- brand logo -->
@@ -22,12 +24,18 @@
             </div>
 
             <!-- nav links-->
-            <div class="hidden md:flex">
-                <ul class="flex space-x-5 text-white">
-                    <li>Home</li>
-                    <li>Why</li>
-                    <li>Features</li>
-                    <li>Blog</li>
+            <div id="mobile-slide" class="z-10 flex fixed bg-slate-400 w-screen h-screen top-0 right-0 justify-center items-center md:bg-transparent md:static md:h-auto duration-500 ">
+                
+                <div id="mobile-slide-close" class="absolute top-3 right-5 bg-green-600 size-10 rounded-full flex justify-center items-center md:hidden">
+                    <button class="text-xl text-slate-200 ">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                
+                <ul class="md:flex md:space-x-5 space-y-7 md:space-y-0 text-2xl md:text-lg text-white">
+                    <li><a href="#home" class="mobile-slide-closed">Home</a></li>
+                    <li><a href="#chat" class="mobile-slide-closed">Chat</a></li>
+                    <li><a href="#features" class="mobile-slide-closed">Features</a></li>
                 </ul>
             </div>
 
@@ -44,17 +52,18 @@
                 </button>
 
                 <!-- Mobile menu -->
-                <div class="md:hidden">
+                <div class="md:hidden mobile-menu duration-500 cursor-pointer">
                     <i class="fa-solid fa-bars text-white"></i>
                 </div>
 
             </div>
 
         </div>
+    
     </div>
 
     <!-- Hero section -->
-    <section class=" bg-green-400 py-28">
+    <section  id="home" class=" bg-green-400 py-28">
 
         <div class="text-center container mx-auto px-10 space-y-16">
 
@@ -81,7 +90,7 @@
     </section>
 
     <!-- First chat section -->
-    <section>
+    <section id="chat">
         <div
             class="grid md:grid-cols-2 items-center container mx-auto py-20 px-5 max-w-5xl md:space-x-4 space-y-5 md:space-y-0">
 
@@ -260,7 +269,7 @@
     </section>
 
     <!-- Device Section -->
-    <div class="bg-slate-100">
+    <div id="features" class="bg-slate-100">
         <div class="py-20 container mx-auto max-w-5xl space-y-20">
 
             <div class="text-center">
@@ -341,9 +350,8 @@
 
     </footer>
 
-
-
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="../assets/Js/main.js"></script>
 
 </html>
