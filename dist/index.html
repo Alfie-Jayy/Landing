@@ -14,12 +14,12 @@
 <body>
 
     <!-- nav bar -->
-    <div class="bg-green-400 nav-control animate__animated">
+    <div class="bg-green-400 w-full nav-control animate__animated">
         
         <div class="flex justify-between items-center container mx-auto px-10 md:px-20 lg:px-32">
 
             <!-- brand logo -->
-            <div>
+            <div class="w-20 md:w-36">
                 <img src="../assets/Img/logo-brand.svg" alt="">
             </div>
 
@@ -43,9 +43,9 @@
             <div class="flex justify-center items-center">
 
                 <button id="dark-switch" onclick="toggleTheme()"
-                    class="shadow w-[72px] flex items-center transition duration-200 rounded-full m-5 bg-slate-800 p-1">
+                    class="shadow  flex items-center transition duration-200 rounded-full m-5 bg-slate-800 p-1">
                     <div id="dark-switch-icon"
-                        class="bg-slate-50 w-8 h-8 rounded-full transform transition duration-200 flex justify-center items-center">
+                        class="bg-slate-50 size-4 p-3 rounded-full transform transition duration-200 flex justify-center items-center">
                         <i class="fa-regular fa-sun"></i>
                     </div>
                     <h6 id="dark-text" class="text-slate-200 translate-x-1 pr-2">FF</h6>
@@ -63,23 +63,23 @@
     </div>
 
     <!-- Hero section -->
-    <section  id="home" class=" bg-green-400 py-28">
+    <section id="home" class="bg-green-400 py-28">
 
         <div class="text-center container mx-auto px-10 space-y-16">
 
-            <h1 class="font-bold text-white text-4xl">IMAGINE A PLACE...</h1>
-            <p class="text-slate-100  max-w-2xl mx-auto"> ...where you can belong to a school club, a gaming group,
+            <h1 class="font-bold text-white text-4xl headline">IMAGINE A PLACE...</h1>
+            <p class="text-slate-100  max-w-2xl mx-auto headline"> ...where you can belong to a school club, a gaming group,
                 or a worldwide art community. Where just you and a handful of friends can spend time together. A place
                 that makes it easy to talk every day and hang out more often.</p>
 
             <div class="flex space-x-3 justify-center">
                 <button
-                    class="bg-slate-100 py-2 px-4 rounded-full text-green-500 hover:bg-green-500 hover:text-slate-100 transition duration-200">
+                    class="bg-slate-100 py-2 px-4 rounded-full text-green-500 hover:bg-green-500 hover:text-slate-100 transition duration-200 headline">
                     <i class="fa-solid fa-download"></i>
                     <span>Download now</span>
                 </button>
                 <button
-                    class="bg-green-700 py-2 px-4 rounded-full text-white hover:bg-green-900 ransition duration-200">
+                    class="bg-green-700 py-2 px-4 rounded-full text-white hover:bg-green-900 ransition duration-200 headline">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span>Order now</span>
                 </button>
@@ -95,7 +95,7 @@
             class="grid md:grid-cols-2 items-center container mx-auto py-20 px-5 max-w-5xl md:space-x-4 space-y-5 md:space-y-0">
 
             <!-- Chat card -->
-            <div class="p-10 shadow rounded-lg">
+            <div class="p-10 shadow rounded-lg headline">
                 <h1 class="font-bold text-2xl mb-3 text-slate-800">Chats</h1>
 
                 <div class="space-y-3">
@@ -139,7 +139,7 @@
 
             </div>
 
-            <div class="space-y-2 text-center md:text-left">
+            <div class="space-y-2 text-center md:text-left headline">
                 <h1 class="text-xl font-semibold">Create an invite-only place where you belong</h1>
                 <p class="text-slate-500 md:max-w-lg mx-auto">Vanilla servers are organized into topic-based channels
                     where you can collaborate, share,
@@ -155,14 +155,14 @@
             class="grid md:grid-cols-2 items-center container mx-auto py-20 px-5 max-w-5xl md:space-x-4 space-y-5 md:space-y-0">
 
             <!-- Text Content -->
-            <div class="space-y-2 md:text-right text-center">
+            <div class="space-y-2 md:text-right text-center headline">
                 <h1 class="text-xl font-semibold">Where hanging out is easy</h1>
                 <p class="text-slate-500 md:max-w-lg mx-auto"> Grab a seat in a voice channel when you're free. Friends
                     in your server can see you're around and instantly pop in to talk without having to call.</p>
             </div>
 
             <!-- Chat card -->
-            <div class="p-10 shadow rounded-lg">
+            <div class="p-10 shadow rounded-lg headline">
                 <h1 class="font-bold text-2xl mb-3 text-slate-800">Chats</h1>
 
                 <div class="space-y-3">
@@ -215,7 +215,7 @@
             class="grid md:grid-cols-2 items-center container mx-auto py-20 px-5 max-w-5xl md:space-x-4 space-y-5 md:space-y-0">
 
             <!-- Chat card -->
-            <div class="p-10 shadow rounded-lg">
+            <div class="p-10 shadow rounded-lg headline">
                 <h1 class="font-bold text-2xl mb-3 text-slate-800">Chats</h1>
 
                 <div class="space-y-3">
@@ -259,7 +259,7 @@
 
             </div>
 
-            <div class="space-y-2 text-center md:text-left">
+            <div class="space-y-2 text-center md:text-left headline">
                 <h1 class="text-xl font-semibold">From few to a fandom</h1>
                 <p class="text-slate-500 md:max-w-lg mx-auto">Get any community running with moderation tools and custom
                     member access. Give members special powers, set up private channels, and more.</p>
@@ -268,11 +268,11 @@
         </div>
     </section>
 
-    <!-- Device Section -->
-    <div id="features" class="bg-slate-100">
+    <!-- Feature Section -->
+    <section id="features" class="bg-slate-100">
         <div class="py-20 container mx-auto max-w-5xl space-y-20">
 
-            <div class="text-center">
+            <div class="text-center headline">
                 <h1 class="font-bold text-slate-800 text-3xl mb-10">RELIABLE TECH FOR STAYING CLOSE</h1>
                 <p class="max-w-xl px-5 mx-auto">Get any community running with moderation tools and custom member
                     access. Give members special powers, set up private channels, and more.</p>
@@ -283,19 +283,19 @@
             </div>
 
             <div class="text-center">
-                <h2 class="text-slate-800 font-bold text-2xl mb-10">Ready to start your journey?</h2>
+                <h2 class="text-slate-800 font-bold text-2xl mb-10 headline">Ready to start your journey?</h2>
                 <button
-                    class="bg-green-500 py-2 px-4 rounded-full text-white hover:bg-green-900  transition duration-200">
+                    class="bg-green-500 py-2 px-4 rounded-full text-white hover:bg-green-900  transition duration-200 headline">
                     <i class="fa-solid fa-download"></i>
                     <span>Download now</span>
                 </button>
             </div>
 
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-800">
+    <footer  class="bg-slate-800">
 
 
         <div class="container mx-auto px-5 py-20 space-y-14">
@@ -350,8 +350,12 @@
 
     </footer>
 
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/Js/main.js"></script>
+
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="../assets/Js/main.js"></script>
+
+
 
 </html>
