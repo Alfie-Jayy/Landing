@@ -6,16 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanilla</title>
     <script src="https://kit.fontawesome.com/183280f8d9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+
+.loading {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: #fff;
+            z-index: 22;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* HTML: <div class="loader"></div> */
+        .loader {
+        width: 70px;
+        aspect-ratio: 1;
+        background:
+            radial-gradient(farthest-side,#ffa516 90%,#0000) center/16px 16px,
+            radial-gradient(farthest-side,green   90%,#0000) bottom/12px 12px;
+        background-repeat: no-repeat;
+        animation: l17 1s infinite linear;
+        position: relative;
+        }
+        .loader::before {    
+        content:"";
+        position: absolute;
+        width: 8px;
+        aspect-ratio: 1;
+        inset: auto 0 16px;
+        margin: auto;
+        background: #ccc;
+        border-radius: 50%;
+        transform-origin: 50% calc(100% + 10px);
+        animation: inherit;
+        animation-duration: 0.5s;
+        }
+        @keyframes l17 { 
+        100%{transform: rotate(1turn)}
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="shortcut icon" href="../assets/Img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="../src/output.css">
 </head>
 
 <body>
 
+    <!-- loading -->
+    <div class="loading">
+        <div class="loader"></div>
+    </div>
+
     <!-- nav bar -->
     <div class="bg-green-400 w-full nav-control animate__animated">
-        
+
         <div class="flex justify-between items-center container mx-auto px-10 md:px-20 lg:px-32">
 
             <!-- brand logo -->
@@ -24,14 +73,16 @@
             </div>
 
             <!-- nav links-->
-            <div id="mobile-slide" class="z-10 flex fixed bg-slate-400 w-screen h-screen top-0 right-0 justify-center items-center md:bg-transparent md:static md:h-auto duration-500 ">
-                
-                <div id="mobile-slide-close" class="absolute top-3 right-5 bg-green-600 size-10 rounded-full flex justify-center items-center md:hidden">
+            <div id="mobile-slide"
+                class="z-10 flex fixed bg-slate-400 w-screen h-screen top-0 right-0 justify-center items-center md:bg-transparent md:static md:h-auto duration-500 ">
+
+                <div id="mobile-slide-close"
+                    class="absolute top-3 right-5 bg-green-600 size-10 rounded-full flex justify-center items-center md:hidden">
                     <button class="text-xl text-slate-200 ">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                 </div>
-                
+
                 <ul class="md:flex md:space-x-5 space-y-7 md:space-y-0 text-2xl md:text-lg text-white">
                     <li><a href="#home" class="mobile-slide-closed">Home</a></li>
                     <li><a href="#chat" class="mobile-slide-closed">Chat</a></li>
@@ -59,7 +110,7 @@
             </div>
 
         </div>
-    
+
     </div>
 
     <!-- Hero section -->
@@ -68,7 +119,8 @@
         <div class="text-center container mx-auto px-10 space-y-16">
 
             <h1 class="font-bold text-white text-4xl headline">IMAGINE A PLACE...</h1>
-            <p class="text-slate-100  max-w-2xl mx-auto headline"> ...where you can belong to a school club, a gaming group,
+            <p class="text-slate-100  max-w-2xl mx-auto headline"> ...where you can belong to a school club, a gaming
+                group,
                 or a worldwide art community. Where just you and a handful of friends can spend time together. A place
                 that makes it easy to talk every day and hang out more often.</p>
 
@@ -295,7 +347,7 @@
     </section>
 
     <!-- Footer -->
-    <footer  class="bg-slate-800">
+    <footer class="bg-slate-800">
 
 
         <div class="container mx-auto px-5 py-20 space-y-14">
@@ -350,8 +402,15 @@
 
     </footer>
 
+    <script>
+        window.addEventListener('load', () => {
+            document.querySelector('.loading').style.display = "none"
+        })
+    </script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"
+        integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../assets/Js/main.js"></script>
 
 </body>
