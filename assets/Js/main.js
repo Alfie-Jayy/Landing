@@ -17,26 +17,20 @@ const toDark = () => {
     "rotate-[360deg]",
     "bg-slate-900"
   );
-  darkSwitchIcon.innerHTML = `<i class="fa-solid fa-moon text-slate-100"></i>`;
-  // darkChangeText.innerText = 'Dark'
-  darkSwitch.classList.remove("bg-slate-800");
-  darkSwitch.classList.add("bg-slate-100");
+  darkSwitchIcon.innerHTML = `<i class="fa-solid fa-moon text-slate-400"></i>`
   localStorage.setItem("data-theme", "dark");
   html.classList.add("dark");
   darkText.classList.add("-translate-x-7");
-  darkText.innerText = "ON";
+  darkText.innerText = "dark";
 };
 
 const toLight = () => {
   darkSwitchIcon.classList.remove("translate-x-full", "bg-slate-900");
-  // darkChangeText.innerText = 'Light'
-  darkSwitch.classList.remove("bg-slate-100");
-  darkSwitch.classList.add("bg-slate-800");
   localStorage.removeItem("data-theme");
   html.classList.remove("dark");
   darkText.classList.remove("-translate-x-7");
-  darkText.innerText = "FF";
-  darkSwitchIcon.innerHTML = `<i class="fa-regular fa-sun"></i>`;
+  darkText.innerText = "light";
+  darkSwitchIcon.innerHTML = `<i class="fa-regular fa-lightbulb"></i>`;
   setTimeout(() => {
     darkSwitchIcon.classList.remove("rotate-[360deg]");
   }, 200);

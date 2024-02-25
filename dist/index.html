@@ -55,7 +55,7 @@
     <link rel="stylesheet" href="../src/output.css">
 </head>
 
-<body>
+<body class="dark:bg-slate-800">
 
     <!-- loading -->
     <div class="loading">
@@ -63,7 +63,7 @@
     </div>
 
     <!-- nav bar -->
-    <div class="bg-green-400 w-full nav-control animate__animated">
+    <div class="bg-green-400 w-full nav-control animate__animated dark:bg-slate-800">
 
         <div class="flex justify-between items-center container mx-auto px-10 md:px-20 lg:px-32">
 
@@ -73,8 +73,7 @@
             </div>
 
             <!-- nav links-->
-            <div id="mobile-slide"
-                class="z-10 flex fixed bg-slate-400 w-screen h-screen top-0 right-0 justify-center items-center md:bg-transparent md:static md:h-auto duration-500 ">
+            <div id="mobile-slide" class="z-10 flex fixed bg-slate-400 dark:bg-slate-800 w-screen h-screen top-0 right-0 justify-center items-center md:bg-transparent md:static md:h-auto duration-500 ">
 
                 <div id="mobile-slide-close"
                     class="absolute top-3 right-5 bg-green-600 size-10 rounded-full flex justify-center items-center md:hidden">
@@ -84,26 +83,27 @@
                 </div>
 
                 <ul class="md:flex md:space-x-5 space-y-7 md:space-y-0 text-2xl md:text-lg text-white">
-                    <li><a href="#home" class="mobile-slide-closed">Home</a></li>
-                    <li><a href="#chat" class="mobile-slide-closed">Chat</a></li>
-                    <li><a href="#features" class="mobile-slide-closed">Features</a></li>
+                    <li><a href="#home" class="mobile-slide-closed dark:text-slate-200">Home</a></li>
+                    <li><a href="#chat" class="mobile-slide-closed dark:text-slate-200">Chat</a></li>
+                    <li><a href="#features" class="mobile-slide-closed dark:text-slate-200">Features</a></li>
                 </ul>
+            
             </div>
 
             <!-- Dark Mode -->
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center w-16 md:w-32">
 
                 <button id="dark-switch" onclick="toggleTheme()"
-                    class="shadow  flex items-center transition duration-200 rounded-full m-5 bg-slate-800 p-1">
+                    class="shadow  flex items-center transition duration-200 rounded-full m-5 p-1">
                     <div id="dark-switch-icon"
-                        class="bg-slate-50 size-4 p-3 rounded-full transform transition duration-200 flex justify-center items-center">
-                        <i class="fa-regular fa-sun"></i>
+                        class="bg-slate-50 size-4 p-3 rounded-full transform transition duration-300 flex justify-center items-center">
+                        <i class="fa-regular fa-lightbulb"></i>
                     </div>
-                    <h6 id="dark-text" class="text-slate-200 translate-x-1 pr-2">FF</h6>
+                    <h6 id="dark-text" class="text-slate-200 translate-x-1 pr-2">light</h6>
                 </button>
 
                 <!-- Mobile menu -->
-                <div class="md:hidden mobile-menu duration-500 cursor-pointer">
+                <div class="md:hidden mobile-menu duration-500 cursor-pointer pr-3">
                     <i class="fa-solid fa-bars text-white"></i>
                 </div>
 
@@ -114,7 +114,7 @@
     </div>
 
     <!-- Hero section -->
-    <section id="home" class="bg-green-400 py-28">
+    <section id="home" class="bg-green-400 py-28 dark:bg-slate-800">
 
         <div class="text-center container mx-auto px-10 space-y-16">
 
@@ -142,13 +142,13 @@
     </section>
 
     <!-- First chat section -->
-    <section id="chat">
+    <section id="chat" class="dark:bg-slate-900">
         <div
             class="grid md:grid-cols-2 items-center container mx-auto py-20 px-5 max-w-5xl md:space-x-4 space-y-5 md:space-y-0">
 
             <!-- Chat card -->
             <div class="p-10 shadow rounded-lg headline">
-                <h1 class="font-bold text-2xl mb-3 text-slate-800">Chats</h1>
+                <h1 class="font-bold text-2xl mb-3 text-slate-800 dark:text-slate-200">Chats</h1>
 
                 <div class="space-y-3">
                     <div>
@@ -158,7 +158,7 @@
                                 <i class="fa-solid fa-power-off"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold">#tailwindcss</h3>
+                                <h3 class="font-bold dark:text-slate-300">#tailwindcss</h3>
                                 <p class="text-green-500 text-sm">Nway Oo: Thanks for everything</p>
                             </div>
                         </div>
@@ -170,7 +170,7 @@
                                 <i class="fa-solid fa-power-off"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold">#VueJS</h3>
+                                <h3 class="font-bold dark:text-slate-300">#VueJS</h3>
                                 <p class="text-green-500 text-sm">Nway Oo: Thanks for everything</p>
                             </div>
                         </div>
@@ -182,7 +182,7 @@
                                 <i class="fa-solid fa-power-off"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold">#React</h3>
+                                <h3 class="font-bold dark:text-slate-300">#React</h3>
                                 <p class="text-green-500 text-sm">Nway Oo: Thanks for everything</p>
                             </div>
                         </div>
@@ -192,8 +192,8 @@
             </div>
 
             <div class="space-y-2 text-center md:text-left headline">
-                <h1 class="text-xl font-semibold">Create an invite-only place where you belong</h1>
-                <p class="text-slate-500 md:max-w-lg mx-auto">Vanilla servers are organized into topic-based channels
+                <h1 class="text-xl font-semibold dark:text-slate-300">Create an invite-only place where you belong</h1>
+                <p class="text-slate-500 md:max-w-lg mx-auto dark:text-slate-100">Vanilla servers are organized into topic-based channels
                     where you can collaborate, share,
                     and just talk about your day without clogging up a group chat.</p>
             </div>
@@ -202,20 +202,20 @@
     </section>
 
     <!-- Second chat section -->
-    <section class="bg-slate-100">
+    <section class="bg-slate-100 dark:bg-slate-800">
         <div
             class="grid md:grid-cols-2 items-center container mx-auto py-20 px-5 max-w-5xl md:space-x-4 space-y-5 md:space-y-0">
 
             <!-- Text Content -->
             <div class="space-y-2 md:text-right text-center headline">
-                <h1 class="text-xl font-semibold">Where hanging out is easy</h1>
-                <p class="text-slate-500 md:max-w-lg mx-auto"> Grab a seat in a voice channel when you're free. Friends
+                <h1 class="text-xl font-semibold dark:text-slate-300">Where hanging out is easy</h1>
+                <p class="text-slate-500 md:max-w-lg mx-auto dark:text-slate-100"> Grab a seat in a voice channel when you're free. Friends
                     in your server can see you're around and instantly pop in to talk without having to call.</p>
             </div>
 
             <!-- Chat card -->
             <div class="p-10 shadow rounded-lg headline">
-                <h1 class="font-bold text-2xl mb-3 text-slate-800">Chats</h1>
+                <h1 class="font-bold text-2xl mb-3 text-slate-800 dark:text-slate-200">Chats</h1>
 
                 <div class="space-y-3">
                     <div>
@@ -225,7 +225,7 @@
                                 <i class="fa-solid fa-power-off"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold">#tailwindcss</h3>
+                                <h3 class="font-bold dark:text-slate-200">#tailwindcss</h3>
                                 <p class="text-green-500 text-sm">Nway Oo: Thanks for everything</p>
                             </div>
                         </div>
@@ -237,7 +237,7 @@
                                 <i class="fa-solid fa-power-off"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold">#VueJS</h3>
+                                <h3 class="font-bold dark:text-slate-200">#VueJS</h3>
                                 <p class="text-green-500 text-sm">Nway Oo: Thanks for everything</p>
                             </div>
                         </div>
@@ -249,7 +249,7 @@
                                 <i class="fa-solid fa-power-off"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold">#React</h3>
+                                <h3 class="font-bold dark:text-slate-200">#React</h3>
                                 <p class="text-green-500 text-sm">Nway Oo: Thanks for everything</p>
                             </div>
                         </div>
@@ -262,13 +262,13 @@
     </section>
 
     <!-- Third chat section -->
-    <section>
+    <section class="dark:bg-slate-900">
         <div
             class="grid md:grid-cols-2 items-center container mx-auto py-20 px-5 max-w-5xl md:space-x-4 space-y-5 md:space-y-0">
 
             <!-- Chat card -->
             <div class="p-10 shadow rounded-lg headline">
-                <h1 class="font-bold text-2xl mb-3 text-slate-800">Chats</h1>
+                <h1 class="font-bold text-2xl mb-3 text-slate-800 dark:text-slate-200">Chats</h1>
 
                 <div class="space-y-3">
                     <div>
@@ -278,7 +278,7 @@
                                 <i class="fa-solid fa-power-off"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold">#tailwindcss</h3>
+                                <h3 class="font-bold dark:text-slate-300">#tailwindcss</h3>
                                 <p class="text-green-500 text-sm">Nway Oo: Thanks for everything</p>
                             </div>
                         </div>
@@ -290,7 +290,7 @@
                                 <i class="fa-solid fa-power-off"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold">#VueJS</h3>
+                                <h3 class="font-bold dark:text-slate-300">#VueJS</h3>
                                 <p class="text-green-500 text-sm">Nway Oo: Thanks for everything</p>
                             </div>
                         </div>
@@ -302,7 +302,7 @@
                                 <i class="fa-solid fa-power-off"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold">#React</h3>
+                                <h3 class="font-bold dark:text-slate-300">#React</h3>
                                 <p class="text-green-500 text-sm">Nway Oo: Thanks for everything</p>
                             </div>
                         </div>
@@ -312,8 +312,8 @@
             </div>
 
             <div class="space-y-2 text-center md:text-left headline">
-                <h1 class="text-xl font-semibold">From few to a fandom</h1>
-                <p class="text-slate-500 md:max-w-lg mx-auto">Get any community running with moderation tools and custom
+                <h1 class="text-xl font-semibold dark:text-slate-300">From few to a fandom</h1>
+                <p class="text-slate-500 md:max-w-lg mx-auto dark:text-slate-200">Get any community running with moderation tools and custom
                     member access. Give members special powers, set up private channels, and more.</p>
             </div>
 
@@ -321,12 +321,12 @@
     </section>
 
     <!-- Feature Section -->
-    <section id="features" class="bg-slate-100">
+    <section id="features" class="bg-slate-100 dark:bg-slate-800">
         <div class="py-20 container mx-auto max-w-5xl space-y-20">
 
             <div class="text-center headline">
-                <h1 class="font-bold text-slate-800 text-3xl mb-10">RELIABLE TECH FOR STAYING CLOSE</h1>
-                <p class="max-w-xl px-5 mx-auto">Get any community running with moderation tools and custom member
+                <h1 class="font-bold text-slate-800 text-3xl mb-10 dark:text-slate-300">RELIABLE TECH FOR STAYING CLOSE</h1>
+                <p class="max-w-xl px-5 mx-auto dark:text-slate-200">Get any community running with moderation tools and custom member
                     access. Give members special powers, set up private channels, and more.</p>
             </div>
 
@@ -335,7 +335,7 @@
             </div>
 
             <div class="text-center">
-                <h2 class="text-slate-800 font-bold text-2xl mb-10 headline">Ready to start your journey?</h2>
+                <h2 class="text-slate-800 font-bold text-2xl mb-10 headline dark:text-slate-200">Ready to start your journey?</h2>
                 <button
                     class="bg-green-500 py-2 px-4 rounded-full text-white hover:bg-green-900  transition duration-200 headline">
                     <i class="fa-solid fa-download"></i>
@@ -347,7 +347,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-800">
+    <footer class="bg-slate-800 dark:bg-slate-900">
 
 
         <div class="container mx-auto px-5 py-20 space-y-14">
