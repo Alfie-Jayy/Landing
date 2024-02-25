@@ -4,11 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
     <title>Vanilla</title>
-    <script src="https://kit.fontawesome.com/183280f8d9.js" crossorigin="anonymous"></script>
+    <meta name="title" content="Vanilla" />
+    <meta name="description" content="My very first project with Tailwind CSS" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="Vanilla" />
+    <meta property="og:description" content="My very first project with Tailwind CSS" />
+    <meta property="og:image" content="../assets/Img/vanilla.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta property="twitter:title" content="Vanilla" />
+    <meta property="twitter:description" content="My very first project with Tailwind CSS" />
+    <meta property="twitter:image" content="../assets/Img/vanilla.png" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="shortcut icon" href="../assets/Img/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <style>
 
-.loading {
+        *{
+            font-family: "Quicksand", sans-serif;
+        }
+
+        .loading {
             width: 100%;
             height: 100vh;
             position: fixed;
@@ -23,36 +51,36 @@
 
         /* HTML: <div class="loader"></div> */
         .loader {
-        width: 70px;
-        aspect-ratio: 1;
-        background:
-            radial-gradient(farthest-side,#ffa516 90%,#0000) center/16px 16px,
-            radial-gradient(farthest-side,green   90%,#0000) bottom/12px 12px;
-        background-repeat: no-repeat;
-        animation: l17 1s infinite linear;
-        position: relative;
-        }
-        .loader::before {    
-        content:"";
-        position: absolute;
-        width: 8px;
-        aspect-ratio: 1;
-        inset: auto 0 16px;
-        margin: auto;
-        background: #ccc;
-        border-radius: 50%;
-        transform-origin: 50% calc(100% + 10px);
-        animation: inherit;
-        animation-duration: 0.5s;
-        }
-        @keyframes l17 { 
-        100%{transform: rotate(1turn)}
+            width: 70px;
+            aspect-ratio: 1;
+            background:
+                radial-gradient(farthest-side, #ffa516 90%, #0000) center/16px 16px,
+                radial-gradient(farthest-side, green 90%, #0000) bottom/12px 12px;
+            background-repeat: no-repeat;
+            animation: l17 1s infinite linear;
+            position: relative;
         }
 
+        .loader::before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            aspect-ratio: 1;
+            inset: auto 0 16px;
+            margin: auto;
+            background: #ccc;
+            border-radius: 50%;
+            transform-origin: 50% calc(100% + 10px);
+            animation: inherit;
+            animation-duration: 0.5s;
+        }
+
+        @keyframes l17 {
+            100% {
+                transform: rotate(1turn)
+            }
+        }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="shortcut icon" href="../assets/Img/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="../src/output.css">
 </head>
 
 <body class="dark:bg-slate-800">
@@ -73,7 +101,8 @@
             </div>
 
             <!-- nav links-->
-            <div id="mobile-slide" class="z-10 flex fixed bg-slate-400 dark:bg-slate-800 w-screen h-screen top-0 right-0 justify-center items-center md:bg-transparent md:static md:h-auto duration-500 ">
+            <div id="mobile-slide"
+                class="z-10 flex fixed bg-slate-400 dark:bg-slate-800 w-screen h-screen top-0 right-0 justify-center items-center md:bg-transparent md:static md:h-auto duration-500 ">
 
                 <div id="mobile-slide-close"
                     class="absolute top-3 right-5 bg-green-600 size-10 rounded-full flex justify-center items-center md:hidden">
@@ -87,7 +116,7 @@
                     <li><a href="#chat" class="mobile-slide-closed dark:text-slate-200">Chat</a></li>
                     <li><a href="#features" class="mobile-slide-closed dark:text-slate-200">Features</a></li>
                 </ul>
-            
+
             </div>
 
             <!-- Dark Mode -->
@@ -193,7 +222,8 @@
 
             <div class="space-y-2 text-center md:text-left headline">
                 <h1 class="text-xl font-semibold dark:text-slate-300">Create an invite-only place where you belong</h1>
-                <p class="text-slate-500 md:max-w-lg mx-auto dark:text-slate-100">Vanilla servers are organized into topic-based channels
+                <p class="text-slate-500 md:max-w-lg mx-auto dark:text-slate-100">Vanilla servers are organized into
+                    topic-based channels
                     where you can collaborate, share,
                     and just talk about your day without clogging up a group chat.</p>
             </div>
@@ -209,7 +239,8 @@
             <!-- Text Content -->
             <div class="space-y-2 md:text-right text-center headline">
                 <h1 class="text-xl font-semibold dark:text-slate-300">Where hanging out is easy</h1>
-                <p class="text-slate-500 md:max-w-lg mx-auto dark:text-slate-100"> Grab a seat in a voice channel when you're free. Friends
+                <p class="text-slate-500 md:max-w-lg mx-auto dark:text-slate-100"> Grab a seat in a voice channel when
+                    you're free. Friends
                     in your server can see you're around and instantly pop in to talk without having to call.</p>
             </div>
 
@@ -313,7 +344,8 @@
 
             <div class="space-y-2 text-center md:text-left headline">
                 <h1 class="text-xl font-semibold dark:text-slate-300">From few to a fandom</h1>
-                <p class="text-slate-500 md:max-w-lg mx-auto dark:text-slate-200">Get any community running with moderation tools and custom
+                <p class="text-slate-500 md:max-w-lg mx-auto dark:text-slate-200">Get any community running with
+                    moderation tools and custom
                     member access. Give members special powers, set up private channels, and more.</p>
             </div>
 
@@ -325,8 +357,10 @@
         <div class="py-20 container mx-auto max-w-5xl space-y-20">
 
             <div class="text-center headline">
-                <h1 class="font-bold text-slate-800 text-3xl mb-10 dark:text-slate-300">RELIABLE TECH FOR STAYING CLOSE</h1>
-                <p class="max-w-xl px-5 mx-auto dark:text-slate-200">Get any community running with moderation tools and custom member
+                <h1 class="font-bold text-slate-800 text-3xl mb-10 dark:text-slate-300">RELIABLE TECH FOR STAYING CLOSE
+                </h1>
+                <p class="max-w-xl px-5 mx-auto dark:text-slate-200">Get any community running with moderation tools and
+                    custom member
                     access. Give members special powers, set up private channels, and more.</p>
             </div>
 
@@ -335,7 +369,8 @@
             </div>
 
             <div class="text-center">
-                <h2 class="text-slate-800 font-bold text-2xl mb-10 headline dark:text-slate-200">Ready to start your journey?</h2>
+                <h2 class="text-slate-800 font-bold text-2xl mb-10 headline dark:text-slate-200">Ready to start your
+                    journey?</h2>
                 <button
                     class="bg-green-500 py-2 px-4 rounded-full text-white hover:bg-green-900  transition duration-200 headline">
                     <i class="fa-solid fa-download"></i>
@@ -408,13 +443,10 @@
         })
     </script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"
-        integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../assets/Js/main.js"></script>
+    <script src="https://kit.fontawesome.com/183280f8d9.js" crossorigin="anonymous"></script>
 
 </body>
-
-
 
 </html>

@@ -1,3 +1,4 @@
+// Switch theme function
 const darkSwitchIcon = document.querySelector("#dark-switch-icon");
 const darkSwitch = document.querySelector("#dark-switch");
 const darkText = document.querySelector("#dark-text");
@@ -5,7 +6,6 @@ const darkChangeText = document.querySelector("#dark-text-change");
 const html = document.documentElement;
 let isDarkMode = false;
 
-// Switch theme function
 const toggleTheme = () => {
   isDarkMode = !isDarkMode;
   switchTheme();
@@ -81,7 +81,7 @@ var waypoint = new Waypoint({
       );
     }
   },
-  // offset: "10%",
+  offset: "70%",
 });
 
 //   Mobile-Slide-Closed
@@ -121,7 +121,7 @@ ScrollReveal().reveal('.headline', {
   
   delay: 300,
   origin: 'bottom',
-  distance: '50px',
+  distance: '10px',
   interval: 300,
   scale: 0.85,
   reset: true
